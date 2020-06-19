@@ -6,7 +6,7 @@ import {
 } from 'reactstrap'
 
 
-class Signuppage extends React.Component{
+class Adminsignup extends React.Component{
   constructor(){
     super();
     this.state = {
@@ -31,7 +31,7 @@ class Signuppage extends React.Component{
       email: this.state.email,
       password: this.state.password
     }
-    axios.post('http://localhost:3000/api/user/register',data).then(() => {
+    axios.post('http://localhost:3000/api/admin/register',data).then(() => {
 
     this.setState({
       redirect : true
@@ -58,7 +58,7 @@ class Signuppage extends React.Component{
     <a href="/"><b>Event </b> Planner</a>
   </div>
   <div class="container-login100">
-    <p className="login-box-msg">Candidates Registration</p>
+    <p className="login-box-msg">Admin Registration</p>
 
           <form onSubmit = {this.sendUser} class="login100-form validate-form flex-sb flex-w">     
           <div className="form-group has-feedback">
@@ -157,4 +157,4 @@ class Signuppage extends React.Component{
         )
        }
     }
-       export default Signuppage
+       export default Adminsignup

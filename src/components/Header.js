@@ -23,14 +23,12 @@ class Header extends React.Component{
   <div class="navbar-custom-menu">
     <ul class="nav navbar-nav">
       <li>
-        <a href="Admin/Signup">Admin Sign up</a>
+        <a href="login">Login</a>
       </li>
       <li>
-        <a href="Signup">User Sign Up</a>
+        <a href="Signup">Sign Up</a>
       </li>  
-      <li>
-        <a href="Vendor/Signup"> Vendor Sign Up</a>
-      </li>
+ 
     </ul>
   </div>
 </nav>

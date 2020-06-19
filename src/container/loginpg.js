@@ -1,18 +1,18 @@
 import React from 'react'
-import Indexpage from '../components/indexpage';
+import Login from '../components/login';
 import Header from '../components/Header';
 
 
 
 
-class Home extends React.Component{
+class Loginpg extends React.Component{
    
        render(){
 
         return(
             <div>
                 <Header />
-                <Indexpage />
+                <Login />
              
 
     
@@ -23,4 +23,4 @@ class Home extends React.Component{
         )
        }
     }
-    export default Home
+    export default Loginpg

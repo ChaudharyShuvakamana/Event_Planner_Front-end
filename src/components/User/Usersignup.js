@@ -6,15 +6,14 @@ import {
 } from 'reactstrap'
 
 
-class VendorSignuppage extends React.Component{
+class Usersignup extends React.Component{
   constructor(){
     super();
     this.state = {
-      'fullname' : '',
-      'businesstype' : '',
+      'firstname' : '',
+      'lastname' : '',
       'phonenumber' : '',
-      'dob' : '',
-      'gender' : '',
+      'location' : '',
       'email' : '',
       'password' : '',
       redirect : false,
@@ -24,14 +23,14 @@ class VendorSignuppage extends React.Component{
   sendUser = (e) =>{
     e.preventDefault();
     const data = {
-      fullname: this.state.fullname,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
       phonenumber: this.state.phonenumber,
       location:this.state.location,
       email: this.state.email,
-      businesstype: this.state.businesstype,
       password: this.state.password
     }
-    axios.post('http://localhost:3000/api/vendor/register',data).then(() => {
+    axios.post('http://localhost:3000/api/user/register',data).then(() => {
 
     this.setState({
       redirect : true
@@ -58,27 +57,37 @@ class VendorSignuppage extends React.Component{
     <a href="/"><b>Event </b> Planner</a>
   </div>
   <div class="container-login100">
-    <p className="login-box-msg">Candidates Registration</p>
+    <p className="login-box-msg">User Registration</p>
 
           <form onSubmit = {this.sendUser} class="login100-form validate-form flex-sb flex-w">     
           <div className="form-group has-feedback">
                     <Col>
                         <FormGroup>
-                            <Label for='fullname'>full Name</Label>
-                            <input className="form-control" type="text" alue={this.state.fullname} onChange={(event)=>
-                        this.setState({fullname: event.target.value})} placeholder="Full name *" required/>
+                            <Label for='firstname'>First Name</Label>
+                            <input className="form-control" type="text" alue={this.state.firstname} onChange={(event)=>
+                        this.setState({firstname: event.target.value})} placeholder="First name *" required/>
                           <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </FormGroup>
                     </Col>
 
                     </div>      
+                        <div className="form-group has-feedback">
+                       <Col>
+                        <FormGroup>
+                            <Label for='lastname'>Last Name</Label>
+                            <input className="form-control" type="text" value={this.state.lastname} onChange={(event)=>
+                        this.setState({lastname: event.target.value})} placeholder="Last name *" required/>
+                          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        </FormGroup>
+                    </Col>
+                        </div>
 
                         <div className="form-group has-feedback">
                         <Col>
                         <FormGroup>
                             <Label for='phonenumber'>phonenumber</Label>
                             <input className="form-control" type="text" value={this.state.phonenumber} onChange={(event)=>
-                        this.setState({phonenumber: event.target.value})} placeholder="Phone phonenumber *" required/>
+                        this.setState({phonenumber: event.target.value})} placeholder="phonenumber *" required/>
                           <span class="glyphicon glyphicon-phone form-control-feedback"></span>
                         </FormGroup>
                     </Col>
@@ -105,16 +114,6 @@ class VendorSignuppage extends React.Component{
                         </FormGroup>
                     </Col>
                </div>
-               <div className="form-group has-feedback">
-                       <Col>
-                        <FormGroup>
-                            <Label for='businesstype'>Business type</Label>
-                            <input className="form-control" type="text" value={this.state.businesstype} onChange={(event)=>
-                        this.setState({businesstype: event.target.value})} placeholder="Business type *" required/>
-                          <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                        </FormGroup>
-                    </Col>
-                        </div>
                <div className="form-group has-feedback">
                         <Col>
                         <FormGroup>
@@ -157,4 +156,4 @@ class VendorSignuppage extends React.Component{
         )
        }
     }
-       export default VendorSignuppage
+       export default Usersignup
