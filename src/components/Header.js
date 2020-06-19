@@ -29,7 +29,7 @@ class Header extends React.Component{
         <a href="Signup">User Sign Up</a>
       </li>  
       <li>
-        <a href="Vendor/Signup"> User Sign Up</a>
+        <a href="Vendor/Signup"> Vendor Sign Up</a>
       </li>
     </ul>
   </div>
