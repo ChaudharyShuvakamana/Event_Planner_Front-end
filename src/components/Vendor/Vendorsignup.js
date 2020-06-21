@@ -11,10 +11,10 @@ class Vendorsignup extends React.Component{
     super();
     this.state = {
       'fullname' : '',
+      'businesstype' : '',
       'phonenumber' : '',
       'location' : '',
       'email' : '',
-      'businesstype' : '',
       'password' : '',
       redirect : false,
     }
@@ -24,10 +24,10 @@ class Vendorsignup extends React.Component{
     e.preventDefault();
     const data = {
       fullname: this.state.fullname,
+      businesstype: this.state.businesstype,
       phonenumber: this.state.phonenumber,
       location:this.state.location,
       email: this.state.email,
-      businesstype: this.state.businesstype,
       password: this.state.password
     }
     axios.post('http://localhost:3000/api/vendor/register',data).then(() => {
@@ -63,21 +63,31 @@ class Vendorsignup extends React.Component{
           <div className="form-group has-feedback">
                     <Col>
                         <FormGroup>
-                            <Label for='fullname'>full Name</Label>
-                            <input className="form-control" type="text" alue={this.state.fullname} onChange={(event)=>
-                        this.setState({fullname: event.target.value})} placeholder="Full name *" required/>
+                            <Label for='fullname'>First Name</Label>
+                            <input className="form-control" id="fullname" type="text" value={this.state.fullname} onChange={(event)=>
+                        this.setState({fullname: event.target.value})} placeholder="First name *" required/>
                           <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </FormGroup>
                     </Col>
 
                     </div>      
+                        <div className="form-group has-feedback">
+                       <Col>
+                        <FormGroup>
+                            <Label for='businesstype'>Last Name</Label>
+                            <input className="form-control" id="businesstype" type="text" value={this.state.businesstype} onChange={(event)=>
+                        this.setState({businesstype: event.target.value})} placeholder="Last name *" required/>
+                          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        </FormGroup>
+                    </Col>
+                        </div>
 
                         <div className="form-group has-feedback">
                         <Col>
                         <FormGroup>
                             <Label for='phonenumber'>phonenumber</Label>
-                            <input className="form-control" type="text" value={this.state.phonenumber} onChange={(event)=>
-                        this.setState({phonenumber: event.target.value})} placeholder="Phone phonenumber *" required/>
+                            <input className="form-control" id="phonenumber" type="text" value={this.state.phonenumber} onChange={(event)=>
+                        this.setState({phonenumber: event.target.value})} placeholder="phonenumber *" required/>
                           <span class="glyphicon glyphicon-phone form-control-feedback"></span>
                         </FormGroup>
                     </Col>
@@ -86,7 +96,7 @@ class Vendorsignup extends React.Component{
                        <Col>
                         <FormGroup>
                             <Label for='location'>location</Label>
-                            <input className="form-control" type="text" value={this.state.location} onChange={(event)=>
+                            <input className="form-control" id="location" type="text" value={this.state.location} onChange={(event)=>
                         this.setState({location: event.target.value})} placeholder="location *" required/>
                           <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </FormGroup>
@@ -98,27 +108,17 @@ class Vendorsignup extends React.Component{
                         <Col>
                         <FormGroup>
                             <Label for='date'>Email</Label>
-                            <input className="form-control" type="email" value={this.state.email} onChange={(event)=>
+                            <input className="form-control" id="email" type="email" value={this.state.email} onChange={(event)=>
                         this.setState({email: event.target.value})} placeholder="Email *" required/>
 						<span className="glyphicon glyphicon-envelope form-control-feedback"></span>
                         </FormGroup>
                     </Col>
                </div>
                <div className="form-group has-feedback">
-                       <Col>
-                        <FormGroup>
-                            <Label for='businesstype'>Business type</Label>
-                            <input className="form-control" type="text" value={this.state.businesstype} onChange={(event)=>
-                        this.setState({businesstype: event.target.value})} placeholder="Business type *" required/>
-                          <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                        </FormGroup>
-                    </Col>
-                        </div>
-               <div className="form-group has-feedback">
                         <Col>
                         <FormGroup>
                             <Label for='password'>password</Label>
-                            <input className="form-control" type="password" value={this.state.password} onChange={(event)=>
+                            <input className="form-control" id="password" type="password" value={this.state.password} onChange={(event)=>
                         this.setState({password: event.target.value})} placeholder="Set A Password *" required/>
 						<span className="glyphicon glyphicon-lock form-control-feedback"></span>
                         </FormGroup>
@@ -130,16 +130,12 @@ class Vendorsignup extends React.Component{
         </div>
 
         <div class="col-xs-4">
-        <button type="submit" className="btn btn-primary btn-block btn-flat" >Sign up</button>
+        <button id="signup" type="submit" className="btn btn-primary btn-block btn-flat" >Sign up</button>
+    
                     
                 
         </div>
-        {/* <div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Register
-						</button>
-					</div>
-        */}
+  
       </div>
 				
 			
