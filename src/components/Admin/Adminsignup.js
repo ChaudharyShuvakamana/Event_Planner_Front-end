@@ -126,7 +126,7 @@ class Adminsignup extends React.Component{
                </div>
                <div class="row">
         <div class="col-xs-8">
-          <a href="login">Already have an Account ?</a>
+          <a href="Adminlogin">Already have an Account ?</a>
         </div>
 
         <div class="col-xs-4">
