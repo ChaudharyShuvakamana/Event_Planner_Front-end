@@ -1,9 +1,11 @@
-import React from "react";
-import axios from "axios";
+import React from 'react'
+import axios from 'axios'
+import { Redirect } from 'react-router';
+import Navi from '../../../layouts/Headers/Navi';
+import Nav from "../../Headers";
 import Map from "../../Map";
-import {Redirect} from 'react-router-dom';
-import VendorNav from "../../../layouts/Headers/VendorNav";
-export default class RegisterVenue extends React.Component{
+
+class RegisterVenues extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -106,19 +108,25 @@ export default class RegisterVenue extends React.Component{
               });
           }
     }
- 
-render(){
-    return(
+   render(){
 
-        <div>
-            {this.handleRedirect()}
-         <VendorNav />
-            <div className = "container mt-8">
-           
-          <div class  = "background-form mb-8">
-          <h2 className = "bold-title">Add Venues</h2><hr></hr>
-          <form onSubmit = {this.handleSubmit.bind(this)}>
-            <div className = "container-fluid">
+        return(
+          <div>
+            <Nav />
+            <div className="content-wrapper">
+            <section id="candidates" className="content-header">
+  <div className="container">
+    <div className="row">
+   <Navi />
+   
+   <div className="col-md-9 bg-white padding-2">
+   <form onSubmit = {this.handleSubmit.bind(this)}>
+    
+          <div className="box-header with-border">
+            <h3 className="box-title">Add new Venues</h3>
+          </div>
+          <div className="box-body">
+          <div className = "container-fluid">
                 
                 <div className = "form-group">
                 <input type = "text" placeholder = "Venue Name" ref = "vname" className = "form-control"></input>
@@ -174,35 +182,44 @@ render(){
             </div>
             <div className = "container-fluid mb-8 ">
             
-        <Map onLocationChange = {this.handleLocationChange.bind(this)} 
-        google = {this.props.google}
-        center = {{lat : 27.717245, lng : 85.323961}}
-        height = '300px'
-        zoom = {15}
-        />
-                        </div>
-
-                    <br />
-                    <br />
-                    <br />
-                        <div className = "container-fluid">
-        <input type = "file" ref = "venueimage" onChange = {this.handleImageChange.bind(this)} className = "form-control"/>
-        <div className = "preview-div">
-    <div className = "img-container">
-    <img src = {this.state.image} className = {(this.state.image == "" ? "venue-img-preview d-none" : "venue-img-preview mt-3" )}/>
+            <Map onLocationChange = {this.handleLocationChange.bind(this)} 
+            google = {this.props.google}
+            center = {{lat : 27.717245, lng : 85.323961}}
+            height = '300px'
+            zoom = {15}
+            />
+            
+                            </div>
+                            <br />
     
-             </div>      
-                      </div>
+                            <div className = "container-fluid">
+            <input type = "file" ref = "venueimage" onChange = {this.handleImageChange.bind(this)} className = "form-control"/>
+            <div className = "preview-div">
+            {/* <div className = "container-fluid mb-8 ">
+        <img src = {this.state.image} className = {(this.state.image == "" ? "venue-img-preview d-none" : "venue-img-preview mt-3" )}/>
         
-                <button className = "custom-btn btn-primary mt-3">Submit</button>
-                </div>
-                </form>
-          </div>
-        </div>
-        </div>
-              
-       
-    )
-}
+                 </div>       */}
+                          </div>
+                          <div className="box-footer">
+            <div className="pull-right">
+                    <button className = "btn btn-primary">Submit</button>
+                    </div>
+                    </div>
+                    </div>
+              </div>
+          
+          </form>
+       </div>
 
-}
+    </div>
+    </div>
+        </section>
+  </div>
+  </div>
+          )
+        }
+        
+ 
+ }
+ export default RegisterVenues
+

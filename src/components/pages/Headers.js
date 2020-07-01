@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class Header extends React.Component{
+class Headers extends React.Component{
 
    render(){
 
@@ -23,14 +23,7 @@ class Header extends React.Component{
 <nav class="navbar navbar-static-top">
  
   <div class="navbar-custom-menu">
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="navlogin">Login</a>
-      </li>
-      <li>
-        <a href="navsignup">Sign Up</a>
-      </li>  
-    </ul>
+ 
   </div>
 </nav>
 </header>
@@ -41,4 +34,4 @@ class Header extends React.Component{
        
 
 }
-export default Header
+export default Headers

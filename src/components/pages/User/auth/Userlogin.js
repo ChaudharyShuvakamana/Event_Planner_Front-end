@@ -128,7 +128,7 @@ constructor(props){
                             <Label for='password'>Password</Label>
                             <input className = "form-control" type = "password"  ref  = "password" id = "password" placeholder = "Enter Password"/>
        
-                          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         </FormGroup>
                     </Col>
                     <div className= "form-group">

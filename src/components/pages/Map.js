@@ -206,7 +206,6 @@ export default class Map extends React.Component{
           if(this.props.center.lat !== undefined){
               map = <div>
                   <div>
-                      <div className = {this.state.err == true ? "alert alert-danger" : "alert alert-danger d-none"}>Invalid Location!</div> 
                      <div className = "form-group">
                           <label htmlFor = "">Address</label>
                           

@@ -6,10 +6,12 @@ import Login from '../pages/User/auth/Userlogin';
 import Signup from '../pages/User/auth/Usersignup';
 import FLogin from '../pages/login';
 import FSignup from '../pages/signup';
+import Vendor from "../pages/Vendor/vendor";
 import VendorsLogin from "../pages/Vendor/auth/Vendorlogin";
 import VendorSignup from "../pages/Vendor/auth/Vendorsignup";
-import RegisterVenue from '../pages/Vendor/Venues/RegisterVenue';
-import BusinessRegister from '../pages/Vendor/Business/BusinessRegister';
+// import RegisterVenue from '../pages/Vendor/Venues/RegisterVenue';
+import Ven from '../pages/Vendor/Venues/RegisterVenues';
+import Bus from '../pages/Vendor/Business/BusinessRegisters';
 
 export default class Routes extends React.Component {
 
@@ -42,6 +44,11 @@ export default class Routes extends React.Component {
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/navlogin" component={FLogin} />
                     <Route exact path="/navsignup" component={FSignup} />
+                    <Route exact path="/Vendors" component={Vendor} />
+                    
+                    <Route exact path="/addvenues" component={Ven} />
+
+                    <Route path="/addBusiness" component={Bus} />
 
                     {/* If else condition to rediect if user is logged in or not logged in */}
 
@@ -53,7 +60,7 @@ export default class Routes extends React.Component {
                     )} />
 
                     <Route path="/vendorlogin" render={() => (
-                        this.vendorLoggedIn() == false ? (<VendorsLogin />) : (<Redirect to="/vendor/" />)
+                        this.vendorLoggedIn() == false ? (<VendorsLogin />) : (<Redirect to="/vendors/" />)
                     )} />
 
                     <Route path="/vendorsign" render={() => (
@@ -62,7 +69,7 @@ export default class Routes extends React.Component {
 
 
                     {/* Vendor Routes for type business */}
-
+{/* 
                     <Route path="/vendor/" render={({ location, history }) => (
                         this.vendorLoggedIn() == false ? (<Redirect to="/vendorlogin" />) : <React.Fragment>
                       
@@ -70,7 +77,7 @@ export default class Routes extends React.Component {
 
                                 (sessionStorage.getItem('vendor_type') == "Professional") ?
 
-                                    <main id="wrapper" className="wrapper">
+                                    <main id="content-wrapper" className="content-wrapper">
 
                             
                                         <Route path="/vendor/addBusiness" component={props => <BusinessRegister />} />
@@ -82,16 +89,14 @@ export default class Routes extends React.Component {
 
 
                                     //Vendor routes type venues
-                                    <main id="wrapper" className="wrapper">
-
-                                        <Route path="/vendor/addvenues" component={props => <RegisterVenue />} />
-                                   
-                                    </main>
+                                    <Route path="/addvenues" render={() => (
+                                        this.vendorLoggedIn() == false ? (<Ven />) : (<Redirect to="/vendor/" />)
+                                    )} />
                             }
                         </React.Fragment>
 
                     )}
-                    />
+                    /> */}
 
                 </Switch>
             </BrowserRouter>

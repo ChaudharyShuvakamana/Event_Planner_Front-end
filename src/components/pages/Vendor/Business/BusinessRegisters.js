@@ -1,11 +1,10 @@
 import React from 'react'
-import Map from '../../Map';
-import axios from 'axios';
+import axios from 'axios'
 import { Redirect } from 'react-router';
-import VendorNav from "../../../layouts/Headers/VendorNav";
+import Navi from '../../../layouts/Headers/Navi';
+import Nav from "../../Headers";
+import Map from "../../Map";
 export default class BusinessRegister extends React.Component{
-
-
     constructor(props){
         super(props);
         this.state = {
@@ -88,6 +87,7 @@ export default class BusinessRegister extends React.Component{
 
         axios.post("http://localhost:3000/api/addBusiness", formData, config).then((res) => {
                  console.log(res);
+                 window.location.reload()
                  this.setRedirect();
             });
 
@@ -114,17 +114,19 @@ export default class BusinessRegister extends React.Component{
         })
        }
     }
-
     render(){
+
         return(
-            <div>
-            {this.handleRedirect()}
-         <VendorNav />
-            <div className = "container mt-8">
-           
-          <div class  = "background-form mb-8">
-          <h2 className = "bold-title">Add New Business</h2><hr></hr>
-          <form onSubmit = {this.handleSubmit.bind(this)}>
+          <div>
+            <Nav />
+            <div className="content-wrapper">
+            <section id="candidates" className="content-header">
+  <div className="container">
+    <div className="row">
+   <Navi />
+   
+   <div className="col-md-9 bg-white padding-2">
+   <form onSubmit = {this.handleSubmit.bind(this)}>
             <div className = "container-fluid">
                 
                 <div className = "form-group">
@@ -179,8 +181,7 @@ export default class BusinessRegister extends React.Component{
         />
                       
                     <br />
-                    <br />
-                    <br />
+                    
                       </div>
 
                     
@@ -188,17 +189,27 @@ export default class BusinessRegister extends React.Component{
         <input type = "file" ref = "businessimage" onChange = {this.handleImageChange.bind(this)} className = "form-control"/>
         <div className = "preview-div">
     <div className = "img-container">
-    <img src = {this.state.image} className = {(this.state.image == "" ? "venue-img-preview d-none" : "venue-img-preview mt-3" )}/>
-    
+    {/* <img src = {this.state.image} className = {(this.state.image == "" ? "venue-img-preview d-none" : "venue-img-preview mt-3" )}/>
+     */}
              </div>      
                       </div>
         
-                <button className = "custom-btn btn-primary mt-3">Submit</button>
+                <div className="box-footer">
+            <div className="pull-right">
+                    <button className = "btn btn-primary">Submit</button>
+                    </div>
+                    </div>
                 </div>
                 </form>
-          </div>
-        </div>
-        </div>
-        )
-    }
-}
+       </div>
+
+    </div>
+    </div>
+        </section>
+  </div>
+  </div>
+          )
+        }
+        
+ 
+ }

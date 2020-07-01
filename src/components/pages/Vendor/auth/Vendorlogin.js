@@ -64,7 +64,7 @@ export default class VendorsLogin extends React.Component{
 
     handleRedirect(){
         if(this.state.redirect){
-            return <Redirect to='/vendor/' />
+            return <Redirect to='/Vendors' />
         }
     }
 
@@ -126,6 +126,7 @@ export default class VendorsLogin extends React.Component{
                           <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </FormGroup>
                     </Col>
+                    </div>
                     <div className= "form-group">
                                            <input type = "checkbox"></input> <span>Remember me </span>
                                        </div>
@@ -141,9 +142,6 @@ export default class VendorsLogin extends React.Component{
                                     
                                   </div>
                                      
-                                      
-
-                    </div> 
                     </form>
     </div>
     </div>
