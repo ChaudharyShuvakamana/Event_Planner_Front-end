@@ -20,7 +20,7 @@ class Signup extends React.Component{
             <div className="inner">
               <h3 className="text-center">User Registration</h3>
             </div>
-            <a href="Vendorsign" className="small-box-footer">
+            <a href="Usersign" className="small-box-footer">
               Register <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>

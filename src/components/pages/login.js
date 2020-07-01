@@ -20,7 +20,7 @@ class Login extends React.Component{
             <div className="inner">
               <h3 className="text-center">User Login</h3>
             </div>
-            <a href="Vendorlogin" className="small-box-footer">
+            <a href="Userlogin" className="small-box-footer">
               Login <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
