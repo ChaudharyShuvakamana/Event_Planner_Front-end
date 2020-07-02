@@ -2,7 +2,7 @@ import React from 'react';
 import {withGoogleMap, GoogleMap, withScriptjs, InfoWindow, Marker} from "react-google-maps";
 import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
-import mapstyle from "../../assets/mapstyle";
+import mapstyle from "../../../assets/mapstyle";
 import Leaflet from "leaflet";
 
 Geocode.setApiKey("AIzaSyAaBx__3P4UG2uCp0CY5vN6ahjOYmsxa6Q");

@@ -100,9 +100,9 @@ export default class BusinessRegister extends React.Component{
         this.setState({
             pricingLabel : "per Hour"
         })
-       }else if(type == "Bakery Item"){
+       }else if(type == "Catering"){
         this.setState({
-            pricingLabel : "per Pound"
+            pricingLabel : "per Plate"
         })
        }else if(type == "DJ"){
         this.setState({
@@ -127,6 +127,9 @@ export default class BusinessRegister extends React.Component{
    
    <div className="col-md-9 bg-white padding-2">
    <form onSubmit = {this.handleSubmit.bind(this)}>
+   <div className="box-header with-border">
+            <h3 className="box-title">Add new Business</h3>
+          </div>
             <div className = "container-fluid">
                 
                 <div className = "form-group">
@@ -136,7 +139,7 @@ export default class BusinessRegister extends React.Component{
               
                     <select className = "form-control" ref = "btype" onChange = {this.handleChange}>
                         <option>Photography</option>
-                        <option>Bakery</option>
+                        <option>Catering</option>
                         <option>DJ</option>
                     </select>
                 </div>

@@ -43,7 +43,6 @@ export default class Vendorsignup extends React.Component{
   
           let fullname = this.refs.fullname.value;
           let location = this.refs.location.value;
-          let type = this.refs.business_type.value;
           let email = this.refs.email.value;
           let password = this.refs.password.value;
           let cpassword = this.refs.cpassword.value;
@@ -55,7 +54,6 @@ export default class Vendorsignup extends React.Component{
               let data = {
                   fullname : fullname,
                   location : location,
-                  type : type,
                   contact : contact,
                   email : email,
                   password : password, 
@@ -80,7 +78,6 @@ export default class Vendorsignup extends React.Component{
                   sessionStorage.setItem("user_token", dataarray[0].token);
                   sessionStorage.setItem("user_name", dataarray[0].name );
                   sessionStorage.setItem("user_email", dataarray[0].email );
-                  sessionStorage.setItem("vendor_type", dataarray[0].type );
                   this.setRedirect();
                  
               })
@@ -256,7 +253,7 @@ export default class Vendorsignup extends React.Component{
                                             </FormGroup>
                                         </Col>
                                     </div>
-                                    <div className="row form-group has-feedback">
+                                    {/* <div className="row form-group has-feedback">
                                         <Col>
                                             <FormGroup>
                                                 <Label for='business_type'>Business Type</Label>
@@ -266,7 +263,7 @@ export default class Vendorsignup extends React.Component{
                                                 </select>
                                             </FormGroup>
                                         </Col>
-                                    </div>
+                                    </div> */}
                                     <div className="row form-group has-feedback">
                                         <Col>
                                             <FormGroup>

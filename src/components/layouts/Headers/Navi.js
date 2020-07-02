@@ -28,7 +28,7 @@ setRedirect(){
   }
   handleRedirect(){
     if(this.state.redirect){
-      return <Redirect to='/vendorslogin' />
+      return <Redirect to='/vendorlogin' />
     }
   }
 
@@ -96,7 +96,10 @@ handleLogout(){
     <li><a href="addvenues"><i className="fa fa-home"></i> Add venues</a></li>
       <li><a href="Editprofile"><i className="fa fa-user"></i> Edit Profile</a></li>
       <li><a href="addBusiness"><i className="fa fa-briefcase"></i> Add Business</a></li>
-      <li><a href="vendorlogin"  onClick = {this.handleLogout.bind(this)} to = ""><i className="fa fa-arrow-circle-o-right"></i> Logout</a></li>
+      <li><a href="businesslist"><i className="fa fa-list"></i> Business list</a></li>
+      <li><a href="venuelist"><i className="fa fa-th-list"></i> Venue list</a></li>
+      <li><Link onClick = {this.handleLogout.bind(this)} to = "" className = "nav-link"><i className="fa fa-arrow-circle-o-right"></i> Logout</Link></li>
+
     </ul>
   </div>
 </div>

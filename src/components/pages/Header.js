@@ -12,9 +12,9 @@ class Header extends React.Component{
 
 <a href="/" class="logo  ">
 
-  <span class="logo-mini"><b>Event</b>Planner</span>
+  <span class="logo-mini"><b>Event </b>Planner</span>
 
-  <span class="logo-lg"><b>Event</b>Planner </span>
+  <span class="logo-lg"><b>Event </b>Planner </span>
 </a>
 
 

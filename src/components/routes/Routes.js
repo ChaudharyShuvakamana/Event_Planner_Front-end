@@ -12,6 +12,9 @@ import VendorSignup from "../pages/Vendor/auth/Vendorsignup";
 // import RegisterVenue from '../pages/Vendor/Venues/RegisterVenue';
 import Ven from '../pages/Vendor/Venues/RegisterVenues';
 import Bus from '../pages/Vendor/Business/BusinessRegisters';
+import BusinessList from '../pages/Vendor/Business/BusinessList';
+// import ShowBusiness from  '../pages/Vendor/Business/ShowBusiness';
+import VenueList from '../pages/Vendor/Venues/VenuesList';
 
 export default class Routes extends React.Component {
 
@@ -49,6 +52,12 @@ export default class Routes extends React.Component {
                     <Route exact path="/addvenues" component={Ven} />
 
                     <Route path="/addBusiness" component={Bus} />
+                    <Route path="/businesslist" component={BusinessList} />
+                    <Route path="/venuelist" component={VenueList} />
+
+                    {/* <Route path="/showbusiness/:businessid"component={<ShowBusiness />}  /> */}
+                         
+
 
                     {/* If else condition to rediect if user is logged in or not logged in */}
 
@@ -66,6 +75,8 @@ export default class Routes extends React.Component {
                     <Route path="/vendorsign" render={() => (
                         this.vendorLoggedIn() == false ? (<VendorSignup />) : (<Redirect to="/vendor/" />)
                     )} />
+                    
+                    
 
 
                     {/* Vendor Routes for type business */}
