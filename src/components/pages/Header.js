@@ -20,19 +20,22 @@ class Header extends React.Component{
 
 {/* <nav class="navbar navbar-static-top justify-content-end"> */}
  
+
 <nav class="navbar navbar-static-top">
- 
+
   <div class="navbar-custom-menu">
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="navlogin">Login</a>
-      </li>
-      <li>
-        <a href="navsignup">Sign Up</a>
-      </li>  
-    </ul>
+  <ul class="nav navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="navlogin">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="navsignup">Sign up</a>
+  </li>
+</ul>
   </div>
 </nav>
+
+
 </header>
             </div>
            
