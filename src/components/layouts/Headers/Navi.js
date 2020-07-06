@@ -57,7 +57,7 @@ handleLogout(){
    }
 
 
-   Axios.get("http://localhost:3000/api/auth/vendorlogout", config).then((res) => {
+   Axios.get("http://localhost:3000/api/vendor/logout", config).then((res) => {
      if(res.data.success) {
       sessionStorage.clear('vendor_token');
     sessionStorage.clear('vendor_name');
@@ -93,7 +93,7 @@ handleLogout(){
   </div>
   <div className="box-body no-padding">
     <ul className="nav nav-pills nav-stacked">
-    <li><a href="addvenues"><i className="fa fa-home"></i> Add venues</a></li>
+    <li><a href="addvenue"><i className="fa fa-home"></i> Add venues</a></li>
       <li><a href="Editprofile"><i className="fa fa-user"></i> Edit Profile</a></li>
       <li><a href="addBusiness"><i className="fa fa-briefcase"></i> Add Business</a></li>
       <li><a href="businesslist"><i className="fa fa-list"></i> Business list</a></li>
