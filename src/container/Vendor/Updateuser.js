@@ -1,18 +1,18 @@
 import React from 'react'
-import Signup from '../components/navsignup';
-import Header from '../components/Header';
+import User from '../../components/Vendor/Updateuser';
+import Header from '../../components/Headers';
 
 
 
 
-class Signuppg extends React.Component{
+class Updateuser extends React.Component{
    
        render(){
 
         return(
             <div>
                 <Header />
-                <Signup />
+                <User />
              
 
     
@@ -23,4 +23,4 @@ class Signuppg extends React.Component{
         )
        }
     }
-    export default Signuppg
+    export default Updateuser

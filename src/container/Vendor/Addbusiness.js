@@ -1,18 +1,18 @@
 import React from 'react'
-import Signup from '../components/navsignup';
-import Header from '../components/Header';
+import Addbusines from '../../components/Vendor/Addbusiness';
+import Header from '../../components/Headers';
 
 
 
 
-class Signuppg extends React.Component{
+class Addbusiness extends React.Component{
    
        render(){
 
         return(
             <div>
                 <Header />
-                <Signup />
+                <Addbusines />
              
 
     
@@ -23,4 +23,4 @@ class Signuppg extends React.Component{
         )
        }
     }
-    export default Signuppg
+    export default Addbusiness
