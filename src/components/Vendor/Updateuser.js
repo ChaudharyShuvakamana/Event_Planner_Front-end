@@ -1,11 +1,7 @@
 import React from 'react'
-import axios from 'axios';
-import Navi from '../Navi'
-import {
-  Container, Col, Form, FormGroup, Label, Input, Button, FormText
-} from 'reactstrap'
-
-
+import axios from 'axios'
+import { Redirect } from 'react-router';
+import Navi from '../Navi';
 
 class Updateuser extends React.Component {
   constructor(props) {
@@ -15,129 +11,107 @@ class Updateuser extends React.Component {
       id: "",
       fullname: '',
       address: '',
-      email: '',
-      password: '',
       number: '',
-      user_data: [],
+      email: '',
+      user: '',
+      password: '',
       config: {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       }
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/logincheck', this.state.config)
-      .then((res) => {
+    axios.get('http://localhost:3000/logincheck', this.state.config)
+      .then((response) => {
         //S alert(response.data.fname)
         this.setState({
-          user_data: res.data,
-          id: res.data._id,
-          fullname: res.data.fullname,
-          address: res.data.address,
-          email: res.data.email,
-          number: res.data.number,
-          password: res.data.password
+          user: response.data,
+          id: response.data._id,
+          fullname: response.data.fullname,
+          address: response.data.address,
+          number: response.data.number,
+          email: response.data.email,
+          password: response.data.password
         })
 
       })
   }
-  // componentDidMount() {
-
-  //     axios.get("http://localhost:4000/users/single/" + this.props.match.params.id).then(
-  //         res => {
-  //             console.log(res.data)
-  //             this.setState({
-  //                 //teacher_data : res.data,
-  //                 fullname: res.data.fullname,
-  //                 address: res.data.address,
-  //                 email: res.data.email,
-  //                 number: res.data.number,
-  //                 password: res.data.password
-
-
-  //             })
-
-  //         })
-  // }
   UpdateData = () => {
     const data = {
       fullname: this.state.fullname,
-      address: this.state.address,
-      email: this.state.email,
+      address: this.state.fullname,
       number: this.state.number,
+      email: this.state.email,
       password: this.state.password
     }
-
-    axios.put("http://localhost:4000/user/" + this.state.id, data,
-      data)
-    alert("update sucessfully")
+    axios.put("http://localhost:3000/updates/" + this.state.id, data).then(
+      setTimeout(function () {
+        window.location.reload()
+        alert("Successfully updated");
+      }, 1000)
+    )
   }
+  handlechange = (e) => {
+    this.setState(
+      { [e.target.name]: e.target.value }
+    )
+  }
+
+
   render() {
     return (
-      <div>
+      <div >
+
         <div className="content-wrapper">
+
           <section id="candidates" className="content-header">
             <div className="container">
               <div className="row">
                 <Navi />
-
                 <div className="col-md-9 bg-white padding-2">
-                  <form >
-
-                    <div className="box-header with-border">
+                 
+                  <form className="form validate-form flex-sb flex-w">
+                  <div className="box-header with-border">
                       <h3 className="box-title">Edit profile</h3>
                     </div>
                     <div className="box-body">
                       <div className="container-fluid">
-
                         <div className="form-group">
-                          <Label for='fullname'>Fullname</Label>
-                          <input type="text" className="form-control" value={this.state.fullname}
-                            onChange={(event) => this.setState({ fullname: event.target.value })} />
+                          <label for="fullname">Full Name</label>
+                          <input type="text" className="form-control" id="fullname" name="fullname" placeholder="Full Name" value={this.state.fullname} onChange={this.handlechange} />
                         </div>
                         <div className="form-group">
-                          <Label for='email'>Email</Label>
-                          <input type="text" className="form-control" value={this.state.email}
-                            onChange={(event) => this.setState({ email: event.target.value })} />
+                          <label for="address">Address</label>
+                          <input type="text" className="form-control input-lg" id="address" name="address" placeholder="Address" value={this.state.address} onChange={this.handlechange} />
                         </div>
                         <div className="form-group">
-                          <Label for='address'>Address</Label>
-                          <input type="text" className="form-control" value={this.state.address}
-                            onChange={(event) => this.setState({ address: event.target.value })} />
+                          <label for="number">Phone number</label>
+                          <input type="number" name="number" className="form-control input-lg" placeholder="Number" value={this.state.number} onChange={this.handlechange} />
                         </div>
                         <div className="form-group">
-                          <Label for='number'>Number</Label>
-                          <input type="text" className="form-control" value={this.state.number}
-                            onChange={(event) => this.setState({ number: event.target.value })} />
+                          <label for="email">Email address</label>
+                          <input type="email" className="form-control input-lg" id="email" placeholder="Email" value={this.state.user.email} readonly />
                         </div>
                         <div className="form-group">
-                          <Label for='password'>Password</Label>
-                          <input type="password" className="form-control" value={this.state.password}
-                            onChange={(event) => this.setState({ password: event.target.value })} />
+                          <label for="password">Password</label>
+                          <input type="password" className="form-control input-lg" id="password" placeholder="password" value={this.state.user.password} readonly />
                         </div>
 
-
-                      </div>
-
-
-                      <div className="container-fluid">
-
-                        <div className="box-footer">
-                          <div className="pull-right">
-                            <button type="button" onClick={this.UpdateData} className="btn btn-flat btn-primary">Update Profile</button>
-                          </div>
+                        <div className="form-group">
+                          <button type="button" onClick={this.UpdateData} className="btn btn-flat btn-primary">Update Profile</button>
                         </div>
                       </div>
                     </div>
-
                   </form>
                 </div>
-
               </div>
             </div>
           </section>
         </div>
-      </div>
 
+
+
+      </div>
 
     )
   }
