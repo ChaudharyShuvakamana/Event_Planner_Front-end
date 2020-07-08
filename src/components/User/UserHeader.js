@@ -15,7 +15,7 @@ import Updatevenue from '../../container/Vendor/Updatevenue'
 import Addbusiness from '../../container/Vendor/Addbusiness'
 import Managebusiness from '../../container/Vendor/Managebusiness'
 
-import AdminHeader from '../Vendor/AdminHeader'
+// import AdminHeader from '../Vendor/AdminHeader'
 import Manageuser from '../Vendor/Manageuser'
 import LogOut from '../Vendor/Logout'
 
@@ -34,7 +34,7 @@ class userHeader extends React.Component {
 
                   <Route path="/Login" exact component={login} />
                     <Route path="/Register" exact component={Register} />
-                    <Route path="/Admin/AdminHeader/" exact component={AdminHeader} />
+                    {/* <Route path="/Admin/AdminHeader/" exact component={AdminHeader} /> */}
                     <Route path="/Manageuser/:id" exact component={Manageuser} />
                     <Route path="/Updateuser/" exact component={Updateuser} />
                     <Route path="/Managevenue/" exact component={Managevenue} />

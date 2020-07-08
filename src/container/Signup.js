@@ -1,19 +1,19 @@
 import React from 'react'
-import Register from '../components/Register';
+import Signuppage from '../components/Signuppage';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 
-
-class Home extends React.Component{
+class Signup extends React.Component{
    
        render(){
 
         return(
             <div>
                 <Header />
-                <Register />
-             
+                <Signuppage />
+                <Footer />
 
     
            
@@ -22,5 +22,7 @@ class Home extends React.Component{
            
         )
        }
-    }
-    export default Home
+       
+
+}
+export default Signup

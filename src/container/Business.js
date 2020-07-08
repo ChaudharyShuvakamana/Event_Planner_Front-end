@@ -1,18 +1,17 @@
 import React from 'react'
-import Loginpage from '../components/Loginpage';
-import Header from '../components/Header';
+import Businesspage from '../components/Businesspage';
+import Header from '../components/Headers';
 import Footer from '../components/Footer';
+import axios from 'axios'
 
 
 
-class Login extends React.Component{
-   
-       render(){
-
+class business extends React.Component{
+  render(){
         return(
             <div>
                 <Header />
-                <Loginpage />
+                <Businesspage />
                 <Footer />
 
     
@@ -25,4 +24,4 @@ class Login extends React.Component{
        
 
 }
-export default Login
+export default business
