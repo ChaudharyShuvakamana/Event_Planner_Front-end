@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Redirect } from 'react-router';
 import Navi from '../components/Navi';
 import '../css/Table.css'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Mybusinesspage extends React.Component {
 
@@ -22,7 +22,8 @@ class Mybusinesspage extends React.Component {
       phone: '',
       address: '',
       email: '',
-      description:'',
+      price: '',
+      description: '',
       test: 'ssssssssssss',
       businesstype: '',
       config: {
@@ -39,6 +40,7 @@ class Mybusinesspage extends React.Component {
           user: response.data,
           name: response.data.name,
           email: response.data.email,
+          price: response.data.price,
           phone: response.data.phone,
         })
         //alert(response.data._id)
@@ -68,7 +70,8 @@ class Mybusinesspage extends React.Component {
         phone: response.data.singleFeed.phone,
         address: response.data.singleFeed.address,
         email: response.data.singleFeed.email,
-        description:response.data.singleFeed.description,
+        price: response.data.singleFeed.price,
+        description: response.data.singleFeed.description,
 
         id: response.data.singleFeed._id,
       });
@@ -92,7 +95,8 @@ class Mybusinesspage extends React.Component {
       phone: this.state.phone,
       address: this.state.address,
       email: this.state.email,
-      description:this.state.description
+      price: this.state.price,
+      description: this.state.description
 
     }
 
@@ -122,31 +126,33 @@ class Mybusinesspage extends React.Component {
       return (
         <div className='row post'>
 
-<table id="customers">
-                  
-                  <tr>
-    <th>business Image</th>               
-    <th>business Name</th>
-    <th>business Type</th>
-    <th>Phone</th>
-    <th>Address </th>
-    <th>Email</th>
-    <th>Description</th>
-  </tr>
-              
-  <tr >
-  <img src={"http://localhost:3000/image/" + post.image} style = {{width : "80px" , marginLeft:"5px", height: "80px"}}/>
-   <td>{post.businessname}</td>
-    <td>{post.businesstype}</td>
-    <td>{post.phone}</td>
-    <td>{post.address}</td>
-    <td>{post.email}</td>
-     <td>{post.description}</td>
-     
+          <table id="customers">
+
+            <tr>
+              <th>business Image</th>
+              <th>business Name</th>
+              <th>business Type</th>
+              <th>Phone</th>
+              <th>Address </th>
+              <th>Email</th>
+              <th>Price</th>
+              <th>Description</th>
+            </tr>
+
+            <tr >
+              <img src={"http://localhost:3000/image/" + post.image} style={{ width: "80px", marginLeft: "5px", height: "80px" }} />
+              <td>{post.businessname}</td>
+              <td>{post.businesstype}</td>
+              <td>{post.phone}</td>
+              <td>{post.address}</td>
+              <td>{post.email}</td>
+              <td>{post.price}</td>
+              <td>{post.description}</td>
 
 
-  </tr>
-           </table>
+
+            </tr>
+          </table>
           <div className="pull-right">
             <button type="button" className="btn btn-primary" onClick={this.deletepost} style={{ marginRight: 10, marginTop: 15 }} onClick={() => this.handledelete(post._id)}> <i className="fa fa-times" ></i> Delete </button>
           </div>
@@ -171,6 +177,8 @@ class Mybusinesspage extends React.Component {
                         <label>Email</label>
                         <input className="form-control" type="text" name='email' placeholder="email" value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} /><br />
 
+                        <label>Price</label>
+                        <input className="form-control" type="text" name='Price' placeholder="price" value={this.state.price} onChange={(event) => this.setState({ price: event.target.value })} /><br />
                       </div>
                     </form>
                     <div className="modal-footer">

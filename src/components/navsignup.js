@@ -22,7 +22,7 @@ class navsignup extends React.Component{
         <div className="col-md-6 latest-job ">
           <div className="small-box bg-red padding-5">
             <div className="inner">
-              <h3 className="text-center">user Registration</h3>
+              <h3 className="text-center">Vendor Registration</h3>
             </div>
             <a href="Signup" className="small-box-footer">
               Register <i className="fa fa-arrow-circle-right"></i>
