@@ -14,6 +14,7 @@ class businesspage extends React.Component {
             phone: "",
             address: "",
             email: "",
+            price: "",
             description: "",
             success: "",
             error: "",
@@ -60,6 +61,7 @@ class businesspage extends React.Component {
         postdata.append('phone', this.state.phone);
         postdata.append('address', this.state.address);
         postdata.append('email', this.state.email);
+        postdata.append('price', this.state.price);
         postdata.append('description', this.state.description);
         axios.post('http://localhost:3000/createbusiness', postdata, this.state.config)
             .then(response => {
@@ -108,9 +110,14 @@ class businesspage extends React.Component {
 
                                                 </div>
                                                 <div className="form-group">
-                                                    <input className="form-control input-lg" id="businesstype" ref="businesstype" name="businesstype" placeholder="Enter business type" value={this.state.businesstype} onChange={this.handleChange} />
 
+                                                    <select className="form-control" id="businesstype" ref="businesstype" name="businesstype" placeholder="Enter business type" value={this.state.businesstype} onChange={this.handleChange}>
+                                                        <option>Photography</option>
+                                                        <option>Catering</option>
+                                                        <option>DJ</option>
+                                                    </select>
                                                 </div>
+                                         
                                                 <div className="form-group">
                                                     <input className="form-control input-lg" id="phone" ref="phone" name="phone" placeholder="Enter phone number" value={this.state.phone} onChange={this.handleChange} />
                                                 </div>
@@ -123,6 +130,10 @@ class businesspage extends React.Component {
                                                 <div className="form-group row">
                                                     <div className="col-md-6">
                                                         <input className="form-control input-lg" id="email" ref="email" name="email" placeholder="Enter email" value={this.state.email} onChange={this.handleChange} />
+
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <input className="form-control input-lg" id="price" ref="price" name="price" placeholder="Price" value={this.state.price} onChange={this.handleChange} />
 
                                                     </div>
 
