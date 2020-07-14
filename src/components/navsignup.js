@@ -14,7 +14,7 @@ class navsignup extends React.Component{
             <div className="inner">
               <h3 className="text-center">User Registration</h3>
             </div>
-            <a href="Usersign" className="small-box-footer">
+            <a href="usersignup" className="small-box-footer">
               Register <i className="fa fa-arrow-circle-right"></i>
             </a>
           </div>

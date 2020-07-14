@@ -24,7 +24,7 @@ handleChange = (e) => {
 }
 submitForm = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/login', this.state)
+    axios.post('http://localhost:3000/userlogin', this.state)
         .then((response) => {
             console.log(response.data)
             localStorage.setItem('token', response.data.token)
@@ -40,10 +40,8 @@ submitForm = (e) => {
 render() {
 // alert(localStorage.getItem('user_type'))
     if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user") {
-        return <Redirect to='/Newsfeed' />
-    }  if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="vendor" ) {
-        return <Redirect to='/venue' />
-    }
+        return <Redirect to='/Bookingvenue' />
+    } 
     return (
    <div>
 <div className="login-box">
@@ -51,7 +49,7 @@ render() {
   <a href="/"><b>Event </b> Planner</a>
   </div>
   <div class="container-login100">
-    <p className="login-box-msg">Vendor Login</p>
+    <p className="login-box-msg">User Login</p>
     <form onSubmit = {this.submitForm} class="login100-form validate-form flex-sb flex-w">     
           <div className="form-group has-feedback">
                     <Col>
@@ -77,7 +75,7 @@ render() {
                                 </div>
                     <div class="row">
                     <div class="col-xs-8">
-                                        <p><a href="Register">Create Account</a></p>
+                                        <p><a href="usersignup">Create Account</a></p>
                                     </div >
         {/* <div class="col-xs-4">
         <button class="btn btn-primary btn-block btn-flat" color="primary" type="submit">Submit</button>

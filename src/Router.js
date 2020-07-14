@@ -13,9 +13,16 @@ import Mybusiness from './container/Mybusiness';
 
 import login from './container/Login'
 import signup from './container/Signup'
+import userlogin from './container/User/Userlogin'
+import usersignup from './container/User/Usersignup'
+import EditUser from './container/User/Updateprofile'
+
 import Signupg from './container/signuppg'
 import Loging from './container/loginpg'
 import Editprofile from './container/Vendor/Updateuser'
+
+import Bookingvenue from './container/Bookingvenue'
+import Bookingbusiness from './container/Bookingbusiness'
 
 
 class Router extends Component {
@@ -32,7 +39,13 @@ class Router extends Component {
                     <Route exact path="/Mybusiness" component={Mybusiness} />
                     <Route path="/Login" exact component={login} />
                     <Route path="/Signup" exact component={signup} />
-                    <Route path="/Edituser" exact component={Editprofile} />
+                    <Route path="/Userlogin" exact component={userlogin} />
+                    <Route path="/Usersignup" exact component={usersignup} />
+                    <Route path="/Editvendor" exact component={Editprofile} />
+                    
+                    <Route path="/Edituser" exact component={EditUser} />
+                    <Route path="/Bookingvenue" exact component={Bookingvenue} />
+                    <Route path="/Bookingbusiness" exact component={Bookingbusiness} />
                 </Switch>
             </BrowserRouter>
         )

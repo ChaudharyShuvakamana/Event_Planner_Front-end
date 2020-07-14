@@ -19,7 +19,7 @@ class Navi extends React.Component{
         }
     }
     componentDidMount() {
-        axios.get('http://localhost:3000/logincheck', this.state.config)
+        axios.get('http://localhost:3000/userlogincheck', this.state.config)
             .then((response) => {
               //alert(response.data._id);
                 this.setState({
@@ -28,15 +28,13 @@ class Navi extends React.Component{
                     fname:response.data.name,
                     email:response.data.email,
                     phone:response.data.phone,
-                    gender:response.data.gender,
-                    dob:response.data.dob
                 })
             })
         }
         
 LogOut=()=>{
     //delete token in browser and logout from backend
-    axios.post('http://localhost:3000/logout')
+    axios.post('http://localhost:3000/userlogout')
     localStorage.removeItem('token')
     
   
@@ -52,13 +50,10 @@ LogOut=()=>{
   </div>
   <div className="box-body no-padding">
     <ul className="nav nav-pills nav-stacked">
-      <li><a href="Editvendor"><i className="fa fa-user"></i> Edit Profile</a></li>
-      <li><a href="Venue"><i className="fa fa-home"></i>  Add Venue</a></li>
-      <li><a href="Business"><i className="fa fa-suitcase"></i>  Add Business</a></li>
-      <li><a href="Myvenue"><i className="fa fa-retweet"></i> My venue</a></li>
-      <li><a href="Mybusiness"><i className="fa fa-list"></i> My Business</a></li>
-      {/* <li><a href="newsfeed"><i className="fa fa-dashboard"></i> News feed</a></li> */}
-      <li><a href="Login" onClick={this.LogOut}><i className="fa fa-arrow-circle-o-right"></i> Logout</a></li>
+      <li><a href="Edituser"><i className="fa fa-user"></i> Edit Profile</a></li>
+      <li><a href="Bookingvenue"><i className="fa fa-home"></i> Book Venues</a></li>
+      <li><a href="Bookingbusiness"><i className="fa fa-suitcase"></i> Book Business</a></li>
+      <li><a href="userlogin" onClick={this.LogOut}><i className="fa fa-arrow-circle-o-right"></i> Logout</a></li>
     </ul>
   </div>
 </div>

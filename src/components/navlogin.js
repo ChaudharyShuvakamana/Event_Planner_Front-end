@@ -16,7 +16,7 @@ class navlogin extends React.Component{
             <div className="inner">
               <h3 className="text-center">User Login</h3>
             </div>
-            <a href="vendorlogin" className="small-box-footer">
+            <a href="userlogin" className="small-box-footer">
               Login <i className="fa fa-arrow-circle-right"></i>
             </a>
           </div>
