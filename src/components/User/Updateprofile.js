@@ -39,7 +39,7 @@ class Updateuser extends React.Component {
   UpdateData = () => {
     const data = {
       fullname: this.state.fullname,
-      address: this.state.fullname,
+      address: this.state.address,
       number: this.state.number,
       email: this.state.email,
       password: this.state.password

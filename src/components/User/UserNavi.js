@@ -53,7 +53,10 @@ LogOut=()=>{
       <li><a href="Edituser"><i className="fa fa-user"></i> Edit Profile</a></li>
       <li><a href="Bookingvenue"><i className="fa fa-home"></i> Book Venues</a></li>
       <li><a href="Bookingbusiness"><i className="fa fa-suitcase"></i> Book Business</a></li>
+      <li><a href="Venuebookedlist"><i className="fa fa-bars"></i> Venue book list</a></li>
+      <li><a href="businessbookedlist"><i className="fa fa-book"></i> Business book list</a></li>
       <li><a href="userlogin" onClick={this.LogOut}><i className="fa fa-arrow-circle-o-right"></i> Logout</a></li>
+
     </ul>
   </div>
 </div>

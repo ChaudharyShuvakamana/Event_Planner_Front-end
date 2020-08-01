@@ -9,6 +9,8 @@ import Myvenue from './container/Myvenue';
 
 import Business from './container/Business'
 import Mybusiness from './container/Mybusiness';
+import Venuebookedlist from './container/bvenuebooklist';
+import Businessbookedlist from './container/bbusinessbooklist';
 
 
 import login from './container/Login'
@@ -42,10 +44,13 @@ class Router extends Component {
                     <Route path="/Userlogin" exact component={userlogin} />
                     <Route path="/Usersignup" exact component={usersignup} />
                     <Route path="/Editvendor" exact component={Editprofile} />
+                    <Route path="/Venuebookedlist" exact component={Venuebookedlist} />
+                    <Route path="/Businessbookedlist" exact component={Businessbookedlist} />
                     
                     <Route path="/Edituser" exact component={EditUser} />
                     <Route path="/Bookingvenue" exact component={Bookingvenue} />
                     <Route path="/Bookingbusiness" exact component={Bookingbusiness} />
+                    
                 </Switch>
             </BrowserRouter>
         )
