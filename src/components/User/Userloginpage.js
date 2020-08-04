@@ -39,9 +39,11 @@ submitForm = (e) => {
 }
 render() {
 // alert(localStorage.getItem('user_type'))
-    if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user") {
-        return <Redirect to='/Bookingvenue' />
-    } 
+if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user") {
+    return <Redirect to='/Edituser' />
+}   if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="admin" ) {
+    return <Redirect to='/AdminDashboard' />
+}
     return (
    <div>
 <div className="login-box">
