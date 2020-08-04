@@ -29,6 +29,7 @@ submitForm = (e) => {
             console.log(response.data)
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('user_type', response.data.user.user_type)
+            localStorage.setItem('_id', response.data.user.fullname)
             // alert(response.data.user.user_type)
             this.setState({ isLoggedIn: true })
 

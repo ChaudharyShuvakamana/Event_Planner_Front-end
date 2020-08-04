@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router';
-import Navi from '../Navi';
+import Navi from '../Admin/AdminNavi';
 
 class Updateuser extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Updateuser extends React.Component {
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:3000/logincheck', this.state.config)
+    axios.get('http://localhost:3000/userlogincheck', this.state.config)
       .then((response) => {
         //S alert(response.data.fname)
         this.setState({
@@ -44,7 +44,7 @@ class Updateuser extends React.Component {
       email: this.state.email,
       password: this.state.password
     }
-    axios.put("http://localhost:3000/updates/" + this.state.id, data).then(
+    axios.put("http://localhost:3000/userupdates/" + this.state.id, data).then(
       setTimeout(function () {
         window.location.reload()
         alert("Successfully updated");

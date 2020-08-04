@@ -1,18 +1,14 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom';
-import Bookingbusinesspage from '../components/Bookingbusinesspage';
+import Mypostpage from '../components/Mypostpage';
 import Header from '../components/Headers';
 import Footer from '../components/Footer';
-import axios from 'axios'
-class Bookingbusiness extends React.Component{
 
-
+class Mypost extends React.Component{
     render(){
-   
           return(
               <div>
                   <Header />
-                  <Bookingbusinesspage/>
+                  <Mypostpage />
                   <Footer />
   
       
@@ -25,4 +21,4 @@ class Bookingbusiness extends React.Component{
          
   
   }
-  export default Bookingbusiness
+  export default Mypost
