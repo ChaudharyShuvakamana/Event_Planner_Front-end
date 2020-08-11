@@ -62,7 +62,7 @@ class Signuppage extends React.Component {
                 <Col>
                   <FormGroup>
                     <Label for='fullname'>Full Name</Label>
-                    <input className="form-control" type="text" value={this.state.fullname} onChange={(event) =>
+                    <input className="form-control" id="fullname" type="text" value={this.state.fullname} onChange={(event) =>
                       this.setState({ fullname: event.target.value })} placeholder="Full name *" required />
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                   </FormGroup>
@@ -73,7 +73,7 @@ class Signuppage extends React.Component {
                 <Col>
                   <FormGroup>
                     <Label for='address'>Address</Label>
-                    <input className="form-control" type="text" value={this.state.address} onChange={(event) =>
+                    <input className="form-control" id="address" type="text" value={this.state.address} onChange={(event) =>
                       this.setState({ address: event.target.value })} placeholder="Address *" required />
                     <span class="glyphicon glyphicon-globe form-control-feedback"></span>
                   </FormGroup>
@@ -84,7 +84,7 @@ class Signuppage extends React.Component {
                 <Col>
                   <FormGroup>
                     <Label for='number'>Phone number</Label>
-                    <input className="form-control" type="text" value={this.state.number} onChange={(event) =>
+                    <input className="form-control" type="text" id="number" value={this.state.number} onChange={(event) =>
                       this.setState({ number: event.target.value })} placeholder="Phone number *" required />
                     <span class="glyphicon glyphicon-phone form-control-feedback"></span>
                   </FormGroup>
@@ -95,7 +95,7 @@ class Signuppage extends React.Component {
                 <Col>
                   <FormGroup>
                     <Label for='date'>Email</Label>
-                    <input className="form-control" type="email" value={this.state.email} onChange={(event) =>
+                    <input className="form-control" id="email" type="email" value={this.state.email} onChange={(event) =>
                       this.setState({ email: event.target.value })} placeholder="Email *" required />
                     <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
                   </FormGroup>
@@ -105,7 +105,7 @@ class Signuppage extends React.Component {
                 <Col>
                   <FormGroup>
                     <Label for='password'>password</Label>
-                    <input className="form-control" type="password" value={this.state.password} onChange={(event) =>
+                    <input className="form-control" id="password" type="password" value={this.state.password} onChange={(event) =>
                       this.setState({ password: event.target.value })} placeholder="Set A Password *" required />
                     <span className="glyphicon glyphicon-lock form-control-feedback"></span>
                   </FormGroup>
@@ -121,7 +121,7 @@ class Signuppage extends React.Component {
                 </div>
 
                 <div class="col-xs-4">
-                  <button type="submit" className="btn btn-primary btn-block btn-flat" >Sign up</button>
+                  <button id="signup" type="submit" className="btn btn-primary btn-block btn-flat" >Sign up</button>
 
 
                 </div>

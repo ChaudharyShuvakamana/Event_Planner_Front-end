@@ -84,11 +84,9 @@ if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user")
                     
                 
         </div> */}
-        <div class="col-xs-4">
-        <button type="submit" className="btn btn-primary btn-block btn-flat" >Submit</button>
-                    
-                
-        </div>
+       <div class="col-xs-4">
+                                           <button className = "btn btn-primary btn-block btn-flat">Login</button>
+                                       </div>
        
       </div>
                  
