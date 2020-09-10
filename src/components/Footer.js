@@ -14,7 +14,7 @@ class Footer extends React.Component{
       &copy; Copy right 2020 | <a href="#">Privacy </a>| <a href="#">Policy</a>All rights
     reserved.
 	<div className="atisda">
-					 Designed by Samir karki 
+					 Designed by Tech junkies
 				</div>
     </div>
   </footer>

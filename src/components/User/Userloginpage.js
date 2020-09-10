@@ -51,13 +51,13 @@ if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user")
   <a href="/"><b>Event </b> Planner</a>
   </div>
   <div class="container-login100">
-    <p className="login-box-msg">User Login</p>
+            <h2 className="login-box-msg">User login</h2>
     <form onSubmit = {this.submitForm} class="login100-form validate-form flex-sb flex-w">     
           <div className="form-group has-feedback">
                     <Col>
                         <FormGroup>
                             <Label for='email'>Email</Label>
-                            <Input type='email'  class="form-control" name='email' id='email' value={this.state.email} onChange={this.handleChange} required/>
+                            <input type='email'  class="form-control" name='email' id='email' value={this.state.email} onChange={this.handleChange} required/>
                             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                         </FormGroup>
                     </Col>
@@ -66,7 +66,7 @@ if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user")
                     <Col>
                         <FormGroup>
                             <Label for='password'>Password</Label>
-                            <Input type='password' class="form-control" name='password' id='password' value={this.state.password} onChange={this.handleChange} required/>
+                            <input type='password' class="form-control" name='password' id='password' value={this.state.password} onChange={this.handleChange} required/>
                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         </FormGroup>
                     </Col>
@@ -77,7 +77,7 @@ if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user")
                                 </div>
                     <div class="row">
                     <div class="col-xs-8">
-                                        <p><a href="usersignup">Create Account</a></p>
+                                        <p><a id="usersignup" href="usersignup">Create Account</a></p>
                                     </div >
         {/* <div class="col-xs-4">
         <button class="btn btn-primary btn-block btn-flat" color="primary" type="submit">Submit</button>
@@ -85,7 +85,7 @@ if (this.state.isLoggedIn === true && localStorage.getItem('user_type')=="user")
                 
         </div> */}
        <div class="col-xs-4">
-                                           <button className = "btn btn-primary btn-block btn-flat">Login</button>
+                                           <button id="login" className = "btn btn-primary btn-block btn-flat">Login</button>
                                        </div>
        
       </div>

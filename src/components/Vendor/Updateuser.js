@@ -86,7 +86,7 @@ class Updateuser extends React.Component {
                         </div>
                         <div className="form-group">
                           <label for="number">Phone number</label>
-                          <input type="number" name="number" className="form-control input-lg" placeholder="Number" value={this.state.number} onChange={this.handlechange} />
+                          <input type="number" name="number" id="number" className="form-control input-lg" placeholder="Number" value={this.state.number} onChange={this.handlechange} />
                         </div>
                         <div className="form-group">
                           <label for="email">Email address</label>
@@ -98,7 +98,7 @@ class Updateuser extends React.Component {
                         </div>
 
                         <div className="form-group">
-                          <button type="button" onClick={this.UpdateData} className="btn btn-flat btn-primary">Update Profile</button>
+                          <button id="updateprofile" type="button" onClick={this.UpdateData} className="btn btn-flat btn-primary">Update Profile</button>
                         </div>
                       </div>
                     </div>

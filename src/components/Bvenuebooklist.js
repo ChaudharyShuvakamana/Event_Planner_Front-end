@@ -151,7 +151,7 @@ class Bvenuebooklist extends React.Component {
   </tr>
            </table>
           <div className="pull-right">
-            <button type="button" className="btn btn-primary" onClick={this.deletepost} style={{ marginRight: 10, marginTop: 15 }} onClick={() => this.handledelete(post._id)}> <i className="fa fa-times" ></i> Delete </button>
+            <button type="button" id="delete" className="btn btn-primary" onClick={this.deletepost} style={{ marginRight: 10, marginTop: 15 }} onClick={() => this.handledelete(post._id)}> <i className="fa fa-times" ></i> Delete </button>
           </div>
           <div className="pull-left">
 
@@ -182,7 +182,7 @@ class Bvenuebooklist extends React.Component {
           </div>
         </form>
         <div className="modal-footer">
-          <button type="button" className="btn btn-primary" onClick={this.UpdateData}>Update</button>
+          <button type="submit" id="update" className="btn btn-primary" onClick={this.UpdateData}>Update</button>
         </div>
       </div>
     </div>

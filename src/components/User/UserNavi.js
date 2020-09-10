@@ -51,7 +51,7 @@ class Navi extends React.Component {
           <div className="box-body no-padding">
             <ul className="nav nav-pills nav-stacked">
 
-              <li><a href="Newsfeed"><i className="fa fa-dashboard"></i> Newsfeed</a></li>
+              <li><a id="newsfeed" href="Newsfeed"><i className="fa fa-dashboard"></i> Newsfeed</a></li>
               <li><a href="Blog"><i className="fa fa-envelope"></i> Post Blog</a></li>
               <li><a href="Mypost"><i className="fa fa-retweet"></i> My post</a></li>
               <li><a href="Edituser"><i className="fa fa-user"></i> Edit Profile</a></li>

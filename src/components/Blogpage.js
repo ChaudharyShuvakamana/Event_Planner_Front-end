@@ -107,7 +107,7 @@ postdata = (e) =>{
        
           <div className="box-footer">
             <div className="pull-right">
-            <button type="submit" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
+            <button type="submit" id="Blog" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
             </div>
             <a href="#" className="btn btn-primary"><i className="fa fa-times"></i> Discard</a>
           </div>

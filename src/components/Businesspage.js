@@ -140,21 +140,21 @@ class businesspage extends React.Component {
                                                 </div>
 
                                                 <div className="form-group ">
-                                                    <textarea name="description" name="description" className="form-control" rows="4" cols="50" value={this.state.description} onChange={this.handleChange}></textarea>
+                                                    <textarea id="" name="description" name="description" className="form-control" rows="4" cols="50" value={this.state.description} onChange={this.handleChange}></textarea>
 
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div className="container-fluid">
-                                            <input type="file" name="image" onChange={this.handleImageChange}
+                                            <input type="file" id="file" name="image" onChange={this.handleImageChange}
                                                 id="image" className="form-control" />
                                             <div className="preview-div">
 
                                             </div>
                                             <div className="box-footer">
                                                 <div className="pull-right">
-                                                    <button type="submit" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
+                                                    <button type="submit" id="business" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
                                                 </div>
                                                 <a href="#" className="btn btn-primary"><i className="fa fa-times"></i> Discard</a>
                                             </div>

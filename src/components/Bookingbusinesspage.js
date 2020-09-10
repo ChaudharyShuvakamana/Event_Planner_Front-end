@@ -153,24 +153,24 @@ class Newsfeedpage extends React.Component {
                       <input className="form-control" type="text" placeholder="business id *" value={businesss._id} name="business_id" onChange={this.handleChange} />
                       */}
                       <label>Full name</label>
-                      <input className="form-control" type="text" placeholder="Full name *" value={this.state.user.fullname} name="fullname" onChange={this.handleChange} />
+                      <input className="form-control" type="text" id= "fullname" placeholder="Full name *" value={this.state.user.fullname} name="fullname" onChange={this.handleChange} />
                       <label>Address</label>
-                      <input className="form-control" type="text" placeholder="Address *" name="address" value={this.state.user.address} onChange={this.handleChange} />
+                      <input className="form-control" type="text" id= "address" placeholder="Address *" name="address" value={this.state.user.address} onChange={this.handleChange} />
                       <label>Phone</label>
-                      <input className="form-control" type="text" placeholder="number *" name="number" value={this.state.user.number} onChange={this.handleChange} />
+                      <input className="form-control" type="text" id= "number" placeholder="number *" name="number" value={this.state.user.number} onChange={this.handleChange} />
                       <label>Email</label>
-                      <input className="form-control" type="text" placeholder="Email *" name="email" value={this.state.user.email} onChange={this.handleChange} />
+                      <input className="form-control" type="text" id= "email" placeholder="Email *" name="email" value={this.state.user.email} onChange={this.handleChange} />
                       <label>Eventname</label>
-                      <input className="form-control" type="text" placeholder="Eventname *" name="eventname" onChange={this.handleChange} />
+                      <input className="form-control" type="text"  id= "eventname" placeholder="Eventname *" name="eventname" onChange={this.handleChange} />
                       <label>From</label>
-                      <input className="form-control" type="date" placeholder="From *" name="from" onChange={this.handleChange} />
+                      <input className="form-control" type="date" id= "from" placeholder="From *" name="from" onChange={this.handleChange} />
                       <label>To</label>
-                      <input className="form-control" type="date" placeholder="To *" name="to" onChange={this.handleChange} />
+                      <input className="form-control" type="date" id= "to" placeholder="To *" name="to" onChange={this.handleChange} />
                     </div>
                     
                   </form>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-primary" style={{ marginTop: 15 }} onClick={this.postbbusiness}> <i className="fa fa-home" ></i> Book business</button>
+                    <button type="button" id="bookbusiness" className="btn btn-primary" style={{ marginTop: 15 }} onClick={this.postbbusiness}> <i className="fa fa-home" ></i> Book business</button>
 
                   </div>
 

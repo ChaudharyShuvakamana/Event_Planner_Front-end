@@ -164,25 +164,25 @@ class Bbusinessbooklist extends React.Component {
           <div className="form-group">
             <h3>Update business booklist</h3>
             <label>full name</label>
-            <input className="form-control" type="text" name='fullname' placeholder="fullname" value={this.state.fullname} onChange={(event) => this.setState({ fullname: event.target.value })} /><br />
+            <input className="form-control" type="text" id="fullname" name='fullname' placeholder="fullname" value={this.state.fullname} onChange={(event) => this.setState({ fullname: event.target.value })} /><br />
             <label>Address</label>
-            <input className="form-control" type="text" name='address' placeholder="address" value={this.state.address} onChange={(event) => this.setState({ address: event.target.value })} /><br />
+            <input className="form-control" type="text" id="address" name='address' placeholder="address" value={this.state.address} onChange={(event) => this.setState({ address: event.target.value })} /><br />
             <label>Number</label>
-            <input className="form-control" type="text" name='number' placeholder="number" value={this.state.number} onChange={(event) => this.setState({ number: event.target.value })} /><br />
+            <input className="form-control" type="text" name='number' id="number" placeholder="number" value={this.state.number} onChange={(event) => this.setState({ number: event.target.value })} /><br />
             <label>Email</label>
-            <input className="form-control" type="text" name='email' placeholder="email" value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} /><br />
+            <input className="form-control" type="text" name='email' id="email" placeholder="email" value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} /><br />
             <label>Event name</label>
-            <input className="form-control" type="text" name='eventname' placeholder="eventname" value={this.state.eventname} onChange={(event) => this.setState({ eventname: event.target.value })} /><br />
+            <input className="form-control" type="text" name='eventname' id="eventname" placeholder="eventname" value={this.state.eventname} onChange={(event) => this.setState({ eventname: event.target.value })} /><br />
             <label>From</label>
-            <input className="form-control" type="date" name='from' placeholder="from" value={this.state.from} onChange={(event) => this.setState({ from: event.target.value })} /><br />
+            <input className="form-control" type="date" name='from' placeholder="from" id="from" value={this.state.from} onChange={(event) => this.setState({ from: event.target.value })} /><br />
             <label>To</label>
-            <input className="form-control" type="date" name='to' placeholder="to" value={this.state.to} onChange={(event) => this.setState({ to: event.target.value })} /><br />
+            <input className="form-control" type="date" name='to' placeholder="to" id="to" value={this.state.to} onChange={(event) => this.setState({ to: event.target.value })} /><br />
             
 
           </div>
         </form>
         <div className="modal-footer">
-          <button type="button" className="btn btn-primary" onClick={this.UpdateData}>Update</button>
+          <button id="update" type="button" className="btn btn-primary" onClick={this.UpdateData}>Update</button>
         </div>
       </div>
     </div>

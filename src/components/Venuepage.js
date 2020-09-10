@@ -99,7 +99,7 @@ class Venuepage extends React.Component {
 
 
                                         <div className="box-header with-border">
-                                            <h3 className="box-title">Add new Venues</h3>
+                                            <h2 className="box-title">Add new Venues</h2>
                                         </div>
                                         <div className="box-body">
                                             <div className="container-fluid">
@@ -143,7 +143,7 @@ class Venuepage extends React.Component {
                                             </div>
                                             <div className="box-footer">
                                                 <div className="pull-right">
-                                                    <button type="submit" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
+                                                    <button type="submit" id="venue" onClick={this.postdata} className="btn btn-primary" ><i className="fa fa-envelope-o"></i> Post</button>
                                                 </div>
                                                 <a href="#" className="btn btn-primary"><i className="fa fa-times"></i> Discard</a>
                                             </div>
